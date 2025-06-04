@@ -3,7 +3,7 @@ services:
     name: django-app
     runtime: python
     buildCommand: pip install -r requirements.txt
-    startCommand: DjangoApiProject.wsgi
+    startCommand:  gunicorn DjangoApiProject.wsgi
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: DjangoApiProject.settings
